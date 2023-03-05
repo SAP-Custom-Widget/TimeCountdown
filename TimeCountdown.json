@@ -1,0 +1,78 @@
+{
+    "id": "com.rohitchouhan.sap.timecountdown",
+    "version": "1.0.0",
+    "name": "Time Countdown",
+    "description": "A Sap custom widget to show time countdown in analytical application",
+    "newInstancePrefix": "TimeCountdown",
+    "vendor": "Rohit Chouhan",
+    "eula": "",
+    "license": "",
+    "icon": "https:\/\/raw.githubusercontent.com\/SAP-Custom-Widget\/TimeCountdown\/main\/icon.png",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-rohitchouhan-sap-timecountdown",
+            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/TimeCountdown\/TimeCountdown.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "builder",
+            "tag": "com-rohitchouhan-sap-timecountdown-builder",
+            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/TimeCountdown\/TimeCountdown_Builder.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "date": {
+            "description": "Date for Countdown",
+            "type": "string",
+            "default": "2099-01-01T00:00"
+        },
+        "captionaftercountdown": {
+            "description": "Caption after Countdown finished",
+            "type": "string",
+            "default": "Welcome"
+        }
+    },
+    "methods": {
+        "setDate": {
+            "description": "Set Date for Countdown",
+            "parameters": [
+                {
+                    "name": "date",
+                    "type": "string",
+                    "description": "Date for Countdown"
+                }
+            ],
+            "body": "this.date = date;"
+        },
+        "getDate": {
+            "returnType": "string",
+            "description": "Return Date for Countdown",
+            "body": "return this.date;"
+        },
+        "setCaptionaftercountdown": {
+            "description": "Set Caption after Countdown finished",
+            "parameters": [
+                {
+                    "name": "captionaftercountdown",
+                    "type": "string",
+                    "description": "Caption after Countdown finished"
+                }
+            ],
+            "body": "this.captionaftercountdown = captionaftercountdown;"
+        },
+        "getCaptionaftercountdown": {
+            "returnType": "string",
+            "description": "Return Caption after Countdown finished",
+            "body": "return this.captionaftercountdown;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
+    }
+}
